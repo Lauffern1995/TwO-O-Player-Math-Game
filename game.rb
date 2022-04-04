@@ -4,12 +4,14 @@ require "./player"
 
 class Game 
 
+  # init game and immed call start game. ** could change players to take in CLI input ** 
   def initialize 
     @player1 = Player.new("Noah")
     @player2 = Player.new("Not Noah")
     startGame
   end
 
+  # starts game by using questions
   def startGame
     new_q = Questions.new
     puts "Player 1: #{new_q.random_question}"
@@ -25,5 +27,6 @@ class Game
 
 end
 
-  Game.new
+# Creates new game
+Game.new
   
